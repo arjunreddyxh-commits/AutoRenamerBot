@@ -1,4 +1,4 @@
-![1](https://iili.io/F1uWoQf.md.jpg)
+o![1](https://iili.io/F1uWoQf.md.jpg)
 
 <h2 align="center">
   ─「Aᴜᴛᴏ ʀᴇɴᴀᴍᴇʀ ʙᴏᴛ」─
@@ -95,15 +95,16 @@ Create `.env` or add variables to your hosting panel:
     ─「 ᴄʀᴇᴅɪᴛs 」─
 <h3 align="center">
     ─「 ᴄʀᴇᴅɪᴛs 」─
+<h3 align="center">
+    ─「 ᴄʀᴇᴅɪᴛs 」─
 </h3>
 
-- <b>[Cᴏᴅᴇғʟɪx](https://t.me/CodeFlix_Bots) ➻ [Sᴘᴇᴄɪᴀʟ ᴛʜx ᴛᴏ ᴄᴏᴅᴇғʟɪx ғᴏʀ ʙᴀsᴇ ʀᴇᴘᴏ]</b>
-- <b>[Sᴇɪsʜɪʀᴏ](https://github.com/•_•)  ➻  [Rᴇ ᴡʀɪᴛᴇ ᴄᴏᴅᴇs ᴀɴᴅ ᴀᴅᴅ ғᴇᴀᴛᴜʀᴇs] </b>
-- <b>[Mᴀsᴛᴇʀ](https://github.com/•_•)  ➻  [Aᴅᴅ ғᴇᴀᴛᴜʀᴇs ᴀɴᴅ ғɪx ʙᴜɢs] </b>
+- <b>[ᴘʀɪᴍᴇ ᴀɴɪᴍᴇ ᴡᴀᴛᴄʜᴇʀ](https://t.me/GODOFANIME143) ➻ [Sᴘᴇᴄɪᴀʟ ᴛʜx ᴛᴏ ᴘʀɪᴍᴇ ᴀɴɪᴍᴇ ᴡᴀᴛᴄʜᴇʀ ғᴏʀ ʙᴀsᴇ ʀᴇᴘᴏ]</b>
+- <b>[ʟᴇɢᴇɴᴅ ʀᴏʜɪᴛ](https://t.me/ROHITREDDY69)  ➻  [Rᴇ ᴡʀɪᴛᴇ ᴄᴏᴅᴇs ᴀɴᴅ ᴀᴅᴅ ғᴇᴀᴛᴜʀᴇs] </b>
+- <b>[ʀᴀᴋᴇsʜ](https://t.me/RakeshSR1)  ➻  [Aᴅᴅ ғᴇᴀᴛᴜʀᴇs ᴀɴᴅ ғɪx ʙᴜɢs] </b>
 
  
 - <b>Bʏ - [Bᴏᴛs ᴋɪɴɢᴅᴏᴍ Tᴇᴀᴍ](https://t.me/botskingdom) </b>
-
 LEGEND
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
