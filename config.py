@@ -5,7 +5,7 @@ class Config(object):
     # pyro client config
     API_ID    = os.environ.get("API_ID", "22266643")
     API_HASH  = os.environ.get("API_HASH", "7d0b85b4146034511b8776ed7ff99de4")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "8467732711:AAF7U8Yw1eDM2fQr7NndY_Mlvzf4Yt0oMJQ") 
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "8053608881:AAHyxrymawY0zVcCG5suUuywAGzXqwB2n9A") 
     PORT = os.environ.get("PORT", "8080")
 
     # database config
@@ -20,7 +20,7 @@ class Config(object):
     FORCE_SUB   = os.environ.get("FORCE_SUB", "-1003166051388 -1002747099183") 
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002911946418"))
     FSUB_PIC = os.environ.get("FSUB_PIC", "https://i.ibb.co/bMFcCB6B/59kLh.jpg")
-    BOT_USERNAME = os.environ.get("BOT_USERNAME", "http://t.me/BK_RENAMER_bot")
+    BOT_USERNAME = os.environ.get("BOT_USERNAME", "http://t.me/ARB_AXC_BOT")
     # wes response configuration     
     WEBHOOK = bool(os.environ.get("WEBHOOK", "True"))
 
