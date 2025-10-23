@@ -16,7 +16,7 @@ class Config(object):
     ADMIN_URL = "https://t.me/botskingdoms"
     BOT_UPTIME  = time.time()
     START_PIC   = os.environ.get("START_PIC", "https://i.ibb.co/bMFcCB6B/59kLh.jpg")
-    ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '').split()]
+    ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '8218652081').split()]
     FORCE_SUB   = os.environ.get("FORCE_SUB", "-1003166051388 -1002747099183") 
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", ""))
     FSUB_PIC = os.environ.get("FSUB_PIC", "https://i.ibb.co/bMFcCB6B/59kLh.jpg")
