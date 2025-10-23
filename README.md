@@ -93,6 +93,8 @@ Create `.env` or add variables to your hosting panel:
 
 <h3 align="center">
     ─「 ᴄʀᴇᴅɪᴛs 」─
+<h3 align="center">
+    ─「 ᴄʀᴇᴅɪᴛs 」─
 </h3>
 
 - <b>[Cᴏᴅᴇғʟɪx](https://t.me/CodeFlix_Bots) ➻ [Sᴘᴇᴄɪᴀʟ ᴛʜx ᴛᴏ ᴄᴏᴅᴇғʟɪx ғᴏʀ ʙᴀsᴇ ʀᴇᴘᴏ]</b>
@@ -101,5 +103,7 @@ Create `.env` or add variables to your hosting panel:
 
  
 - <b>Bʏ - [Bᴏᴛs ᴋɪɴɢᴅᴏᴍ Tᴇᴀᴍ](https://t.me/botskingdom) </b>
+
+LEGEND
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
