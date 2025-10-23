@@ -25,114 +25,131 @@ class Config(object):
     WEBHOOK = bool(os.environ.get("WEBHOOK", "True"))
 
 
-class Txt(object):
-    # part of text configuration
-        
-    START_TXT = """<b>ʜᴇʏ! {}  
+class Txt:
+    """Centralized text configuration for Auto-Renamer Bot with emojis & bold fonts"""
 
-» ɪ ᴀᴍ ᴀᴅᴠᴀɴᴄᴇᴅ ʀᴇɴᴀᴍᴇ ʙᴏᴛ! ᴡʜɪᴄʜ ᴄᴀɴ ᴀᴜᴛᴏʀᴇɴᴀᴍᴇ ʏᴏᴜʀ ғɪʟᴇs ᴡɪᴛʜ ᴄᴜsᴛᴏᴍ ᴄᴀᴘᴛɪᴏɴ ᴀɴᴅ ᴛʜᴜᴍʙɴᴀɪʟ ᴀɴᴅ ᴀʟsᴏ sᴇǫᴜᴇɴᴄᴇ ᴛʜᴇᴍ ᴘᴇʀғᴇᴄᴛʟʏ</b>"""
+    # Welcome / Start message
+    START_TXT = """✨👋 <b>Hᴇʏ! {} </b>
+
+🚀 I am an <b>Advanced Auto-Rename Bot</b>!
+I can automatically rename your files with:
+
+🎨 Custom Captions  
+🖼️ Thumbnails  
+🔢 Perfect Sequence  
+
+Let's get started!"""
+
+    # File rename setup instructions
+    FILE_NAME_TXT = """📝 <b>» Sᴇᴛᴜᴘ Aᴜᴛᴏ-Rᴇɴᴀᴍᴇ Fᴏʀᴍᴀᴛ @BOTSKINGDOMS</b>
+
+<b>Variables:</b>  
+➲ <b>episode</b> - Replace with episode number  
+➲ <b>quality</b> - Replace with quality
+
+<b>Example:</b>  
+<code>/autorename Your Anime Name Here [S01 - EPepisode - [Quality] [Dual] @BotsKingdoms</code>
+
+<b>Command:</b> /autorename - Rename media files by including 'episode' & 'quality' variables."""
+
+    # About bot
+    ABOUT_TXT = """🤖 <b>❍ Bᴏᴛ Iɴғᴏ</b>  
+❍ <b>Bot by:</b> <a href="https://t.me/ROHITREDDY69">Rohit</a>  
+❍ <b>Developer:</b> <a href="https://t.me/ROHITREDDY69">Rohit</a>  
+❍ <b>Language:</b> <a href="https://www.python.org/">Python</a>  
+❍ <b>Database:</b> <a href="https://www.mongodb.com/">MongoDB</a>  
+❍ <b>Repo:</b> <a href="https://github.com/BOTSKINGDOMS/Auto-Renamer-bot.git">GitHub</a>  
+❍ <b>Support:</b> <a href="https://t.me/botskingdoms">Bots Kingdoms</a>  
+
+🔹 Click buttons below for help & info about me."""
+
+    # Thumbnail guide
+    THUMBNAIL_TXT = """🖼️ <b>» Sᴇᴛ Cᴜsᴛᴏᴍ Tʜᴜᴍʙɴᴀɪʟ @BOTSKINGDOMS</b>
+
+➲ <b>/start</b> - Send any photo to auto-set as thumbnail  
+➲ <b>/del_thumb</b> - Delete old thumbnail  
+➲ <b>/view_thumb</b> - View current thumbnail  
+
+⚠️ Note: If no thumbnail is saved, original file thumbnail will be used."""
+
+    # Caption guide
+    CAPTION_TXT = """📝 <b>» Sᴇᴛ Cᴜsᴛᴏᴍ Cᴀᴘᴛɪᴏɴ & Mᴇᴅɪᴀ Tʏᴘᴇ @BOTSKINGDOMS</b>
+
+<b>Variables:</b>  
+➲ <b>SIZE:</b> {filesize}  
+➲ <b>DURATION:</b> {duration}  
+➲ <b>FILENAME:</b> {filename}  
+
+➲ <b>/set_caption</b> - Set a custom caption  
+➲ <b>/see_caption</b> - View your caption  
+➲ <b>/del_caption</b> - Delete your caption  
+
+<b>Example:</b> /set_caption File Name: {filename}"""
+
+    # Progress bar template
+    PROGRESS_BAR = """
+📁 <b>Size:</b> {1} | {2}  
+⏳️ <b>Done:</b> {0}%  
+🚀 <b>Speed:</b> {3}/s  
+⏰️ <b>ETA:</b> {4}"""
+
+    # Donation info
+    DONATE_TXT = """💖 <b>Thanks for showing interest in donation!!</b>  
+
+❌ But we <b>don't accept money</b>.  
+👍 Just show your support to @BOTSKINGDOMS!  
+
+❤️ Love from @ROHITREDDY69"""
+
     
-    FILE_NAME_TXT = """<b>» <u>sᴇᴛᴜᴘ ᴀᴜᴛᴏ ʀᴇɴᴀᴍᴇ ғᴏʀᴍᴀᴛ @BOTSKINGDOMS</u></b>
+    HELP_TXT = """<b>🌟 ʜᴇʀᴇ ɪꜱ ᴛʜᴇ ʜᴇʟᴘ ᴍᴇɴᴜ & ɪᴍᴘᴏʀᴛᴀɴᴛ ᴄᴏᴍᴍᴀɴᴅꜱ 🌟
 
-<b>ᴠᴀʀɪᴀʙʟᴇꜱ :</b>
-➲ ᴇᴘɪꜱᴏᴅᴇ - ᴛᴏ ʀᴇᴘʟᴀᴄᴇ ᴇᴘɪꜱᴏᴅᴇ ɴᴜᴍʙᴇʀ
-➲ ǫᴜᴀʟɪᴛʏ - ᴛᴏ ʀᴇᴘʟᴀᴄᴇ ǫᴜᴀʟɪᴛʏ
+💠 <u>ᴀᴡᴇꜱᴏᴍᴇ ꜰᴇᴀᴛᴜʀᴇꜱ</u> 🫧
 
-<b>‣ ꜰᴏʀ ᴇx:- </b> <code> /autorename Your Anime Name Here [S01 - EPepisode - [Quality]  [Dual] @BotsKingdoms </code>
+⚡ ᴛʜɪꜱ ʀᴇɴᴀᴍᴇ ʙᴏᴛ ʜᴇʟᴘꜱ ʏᴏᴜ ᴇᴀꜱɪʟʏ ʀᴇɴᴀᴍᴇ, ᴀᴅᴅ ᴍᴇᴛᴀᴅᴀᴛᴀ, ᴀɴᴅ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ꜰɪʟᴇꜱ ꜰʟᴀᴡʟᴇꜱꜱʟʏ.
 
-<b>‣ /Autorename: ʀᴇɴᴀᴍᴇ ʏᴏᴜʀ ᴍᴇᴅɪᴀ ꜰɪʟᴇꜱ ʙʏ ɪɴᴄʟᴜᴅɪɴɢ 'ᴇᴘɪꜱᴏᴅᴇ' ᴀɴᴅ 'ǫᴜᴀʟɪᴛʏ' ᴠᴀʀɪᴀʙʟᴇꜱ ɪɴ ʏᴏᴜʀ ᴛᴇxᴛ, ᴛᴏ ᴇxᴛʀᴀᴄᴛ ᴇᴘɪꜱᴏᴅᴇ ᴀɴᴅ ǫᴜᴀʟɪᴛʏ ᴘʀᴇꜱᴇɴᴛ ɪɴ ᴛʜᴇ ᴏʀɪɢɪɴᴀʟ ꜰɪʟᴇɴᴀᴍᴇ. @BOTSKINGDOMS """
-    
-    ABOUT_TXT = f"""<b>❍ ʙᴏᴛ ʙʏ: <a href="https://t.me/ROHITREDDY69">ʀᴏʜɪᴛ</a>
-❍ ᴅᴇᴠᴇʟᴏᴩᴇʀ : <a href="https://t.me/ROHITREDDY69">ʀᴏʜɪᴛ</a>
-❍ ʟᴀɴɢᴜᴀɢᴇ : <a href="https://www.python.org/">ᴘʏᴛʜᴏɴ</a>
-❍ ᴅᴀᴛᴀʙᴀꜱᴇ : <a href="https://www.mongodb.com/">ᴍᴏɴɢᴏ ᴅʙ</a>
-❍ ᴘᴜʙʟɪᴄ ʀᴇᴘᴏ : <a href="https://github.com/BOTSKINGDOMS/Auto-Renamer-bot.git">ʀᴇᴘᴏ</a>
-❍ ʙᴏᴛsᴋɪɴɢᴅᴏᴍs: <a href="https://t.me/botskingdoms">Bᴏᴛs Kɪɴɢᴅᴏᴍ</a>
+🔹 /autorename – <i>ᴀᴜᴛᴏ ʀᴇɴᴀᴍᴇ ʏᴏᴜʀ ꜰɪʟᴇꜱ ɪɴꜱᴛᴀɴᴛʟʏ</i>  
+🔹 /metadata – <i>ᴇɴᴀʙʟᴇ ᴏʀ ᴅɪꜱᴀʙʟᴇ ᴍᴇᴛᴀᴅᴀᴛᴀ ꜰᴇᴀᴛᴜʀᴇꜱ</i>  
+🔹 /help – <i>ɢᴇᴛ ɪɴꜱᴛᴀɴᴛ ꜱᴜᴘᴘᴏʀᴛ ᴀɴᴅ ɢᴜɪᴅᴀɴᴄᴇ</i>  
 
-➻ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ɢɪᴠᴇɴ ʙᴇʟᴏᴡ ғᴏʀ ɢᴇᴛᴛɪɴɢ ʙᴀsɪᴄ ʜᴇʟᴩ ᴀɴᴅ ɪɴғᴏ ᴀʙᴏᴜᴛ ᴍᴇ.</b>"""
+💫 <b>ᴘᴏᴡᴇʀᴇᴅ ʙʏ:</b> <a href='https://t.me/BOTSKINGDOMS'>@BOTSKINGDOMS</a> ⚙️</b>"""
+SEND_METADATA = """<b>🎚️ -- ᴍᴇᴛᴀᴅᴀᴛᴀ ꜱᴇᴛᴛɪɴɢꜱ -- 🎚️</b>
 
-    
-    THUMBNAIL_TXT = """<b><u>» ᴛᴏ ꜱᴇᴛ ᴄᴜꜱᴛᴏᴍ ᴛʜᴜᴍʙɴᴀɪʟ @BOTSKINGDOMS</u></b>
-    
-➲ /start: ꜱᴇɴᴅ ᴀɴʏ ᴘʜᴏᴛᴏ ᴛᴏ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ꜱᴇᴛ ɪᴛ ᴀꜱ ᴀ ᴛʜᴜᴍʙɴᴀɪʟ..
-➲ /del_thumb: ᴜꜱᴇ ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ ᴅᴇʟᴇᴛᴇ ʏᴏᴜʀ ᴏʟᴅ ᴛʜᴜᴍʙɴᴀɪʟ.
-➲ /view_thumb: ᴜꜱᴇ ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ ᴠɪᴇᴡ ʏᴏᴜʀ ᴄᴜʀʀᴇɴᴛ ᴛʜᴜᴍʙɴᴀɪʟ.
+🌀 <code>/metadata</code> – <i>ᴛᴜʀɴ ᴏɴ / ᴏғғ ᴍᴇᴛᴀᴅᴀᴛᴀ ᴍᴏᴅᴇ</i>
 
-ɴᴏᴛᴇ: ɪꜰ ɴᴏ ᴛʜᴜᴍʙɴᴀɪʟ ꜱᴀᴠᴇᴅ ɪɴ ʙᴏᴛ ᴛʜᴇɴ, ɪᴛ ᴡɪʟʟ ᴜꜱᴇ ᴛʜᴜᴍʙɴᴀɪʟ ᴏꜰ ᴛʜᴇ ᴏʀɪɢɪɴɪᴀʟ ꜰɪʟᴇ ᴛᴏ ꜱᴇᴛ ɪɴ ʀᴇɴᴀᴍᴇᴅ ꜰɪʟᴇ"""
+<b>📝 ᴅᴇꜱᴄʀɪᴘᴛɪᴏɴ:</b>  
+🎞️ ᴛʜɪꜱ ꜰᴇᴀᴛᴜʀᴇ ᴍᴏᴅɪꜰɪᴇꜱ ʏᴏᴜʀ <b>MKV</b> ꜰɪʟᴇꜱ ʙʏ ᴀᴅᴅɪɴɢ ᴛɪᴛʟᴇꜱ ᴛᴏ:  
+🎧 ᴀᴜᴅɪᴏ ꜱᴛʀᴇᴀᴍꜱ  
+🎥 ᴠɪᴅᴇᴏ ꜱᴛʀᴇᴀᴍꜱ  
+💬 ꜱᴜʙᴛɪᴛʟᴇ ꜱᴛʀᴇᴀᴍꜱ
 
-    CAPTION_TXT = """<b><u>» ᴛᴏ ꜱᴇᴛ ᴄᴜꜱᴛᴏᴍ ᴄᴀᴘᴛɪᴏɴ ᴀɴᴅ ᴍᴇᴅɪᴀ ᴛʏᴘᴇ @BOTSKINGDOMS</u></b>
-    
-<b>ᴠᴀʀɪᴀʙʟᴇꜱ :</b>         
-ꜱɪᴢᴇ: {ꜰɪʟᴇꜱɪᴢᴇ}
-ᴅᴜʀᴀᴛɪᴏɴ: {duration}
-ꜰɪʟᴇɴᴀᴍᴇ: {ꜰɪʟᴇɴᴀᴍᴇ}
+🌈 ᴄᴜꜱᴛᴏᴍɪᴢᴇ ʏᴏᴜʀ ꜰɪʟᴇꜱ ᴡɪᴛʜ ꜱᴛʏʟᴇ 💫"""
+META_TXT = """<b>🎬 ᴍᴀɴᴀɢᴇ ᴍᴇᴛᴀᴅᴀᴛᴀ ꜰᴏʀ ʏᴏᴜʀ ᴠɪᴅᴇᴏꜱ & ꜰɪʟᴇꜱ 🎬</b>
 
-➲ /set_caption: ᴛᴏ ꜱᴇᴛ ᴀ ᴄᴜꜱᴛᴏᴍ ᴄᴀᴘᴛɪᴏɴ.
-➲ /see_caption: ᴛᴏ ᴠɪᴇᴡ ʏᴏᴜʀ ᴄᴜꜱᴛᴏᴍ ᴄᴀᴘᴛɪᴏɴ.
-➲ /del_caption: ᴛᴏ ᴅᴇʟᴇᴛᴇ ʏᴏᴜʀ ᴄᴜꜱᴛᴏᴍ ᴄᴀᴘᴛɪᴏɴ.
+<b>🌈 ᴠᴀʀɪᴏᴜꜱ ᴍᴇᴛᴀᴅᴀᴛᴀ ꜰɪᴇʟᴅꜱ:</b>  
+🎯 <b>ᴛɪᴛʟᴇ:</b> ᴅᴇꜱᴄʀɪᴘᴛɪᴠᴇ ɴᴀᴍᴇ ᴏꜰ ᴍᴇᴅɪᴀ  
+🧑‍💼 <b>ᴀᴜᴛʜᴏʀ:</b> ᴄʀᴇᴀᴛᴏʀ ᴏʀ ᴏᴡɴᴇʀ  
+🎤 <b>ᴀʀᴛɪꜱᴛ:</b> ᴀꜱꜱᴏᴄɪᴀᴛᴇᴅ ᴀʀᴛɪꜱᴛ  
+🎧 <b>ᴀᴜᴅɪᴏ:</b> ᴀᴜᴅɪᴏ ᴛʀᴀᴄᴋ ɴᴀᴍᴇ  
+💬 <b>ꜱᴜʙᴛɪᴛʟᴇ:</b> ꜱᴜʙᴛɪᴛʟᴇ ᴛɪᴛʟᴇ ᴏʀ ʟᴀɴɢᴜᴀɢᴇ  
+🎥 <b>ᴠɪᴅᴇᴏ:</b> ᴠɪᴅᴇᴏ ᴛɪᴛʟᴇ ᴏʀ ᴅᴇꜱᴄʀɪᴘᴛɪᴏɴ  
 
-» ꜰᴏʀ ᴇx:- /set_caption ꜰɪʟᴇ ɴᴀᴍᴇ: {ꜰɪʟᴇɴᴀᴍᴇ}"""
+<b>⚙️ ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ ᴛᴜʀɴ ᴏɴ / ᴏғғ ᴍᴇᴛᴀᴅᴀᴛᴀ:</b>  
+➜ <code>/metadata</code>"""
 
-    PROGRESS_BAR = """\n
-<b>📁 Size</b> : {1} | {2}
-<b>⏳️ Done</b> : {0}%
-<b>🚀 Speed</b> : {3}/s
-<b>⏰️ ETA</b> : {4} """
-    
-    
-    DONATE_TXT = """<blockquote> ᴛʜᴀɴᴋs ғᴏʀ sʜᴏᴡɪɴɢ ɪɴᴛᴇʀᴇsᴛ ɪɴ ᴅᴏɴᴀᴛɪᴏɴ!!</blockquote>
+🌟 𝐌𝐞𝐭𝐚𝐝𝐚𝐭𝐚 𝐂𝐮𝐬𝐭𝐨𝐦𝐢𝐳𝐚𝐭𝐢𝐨𝐧 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬 🌟
+╭━━━━━━━━━━━━━━━━━━━━━━━╮
+┃ 🎧 𝐂𝐮𝐬𝐭𝐨𝐦𝐢𝐳𝐞 𝐘𝐨𝐮𝐫 𝐌𝐞𝐝𝐢𝐚 𝐌𝐞𝐭𝐚𝐝𝐚𝐭𝐚 ┃
+╰━━━━━━━━━━━━━━━━━━━━━━━╯
 
-<b><i>💞  ʙᴜᴛ ᴡᴇ ᴅᴏɴ'ᴛ ᴀᴄᴄᴇᴘᴛ ᴍᴏɴᴇʏ!! 
-
-
-ᴊᴜsᴛ sʜᴏᴡ ʏᴏᴜ sᴜᴘᴘᴏʀᴛ ᴛᴏ @BOTSKINGDOMS !! 
-
-
-ᴛʜᴀᴛs ᴇɴᴏᴜɢʜᴇ!! ʟᴏᴠᴇ ғᴏʀᴍ @ROHITREDDY69"""
-
-    
-    HELP_TXT = """<b>ʜᴇʀᴇ ɪꜱ ʜᴇʟᴘ ᴍᴇɴᴜ ɪᴍᴘᴏʀᴛᴀɴᴛ ᴄᴏᴍᴍᴀɴᴅꜱ:
-
-ᴀᴡᴇsᴏᴍᴇ ғᴇᴀᴛᴜʀᴇs🫧
-
-ʀᴇɴᴀᴍᴇ ʙᴏᴛ ɪꜱ ᴀ ʜᴀɴᴅʏ ᴛᴏᴏʟ ᴛʜᴀᴛ ʜᴇʟᴘꜱ ʏᴏᴜ ʀᴇɴᴀᴍᴇ ᴀɴᴅ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ꜰɪʟᴇꜱ ᴇꜰꜰᴏʀᴛʟᴇꜱꜱʟʏ.
-
-➲ /autorename: ᴀᴜᴛᴏ ʀᴇɴᴀᴍᴇ ʏᴏᴜʀ ꜰɪʟᴇꜱ.
-➲ /metadata: ᴄᴏᴍᴍᴀɴᴅꜱ ᴛᴏ ᴛᴜʀɴ ᴏɴ ᴏғғ ᴍᴇᴛᴀᴅᴀᴛᴀ.
-➲ /help: ɢᴇᴛ ǫᴜɪᴄᴋ ᴀꜱꜱɪꜱᴛᴀɴᴄᴇ. @BOTSKINGDOMS</b>"""
-
-SEND_METADATA = """
-<b>--Metadata Settings:--</b>
-
-➜ /metadata: Turn on or off metadata.
-
-<b>Description</b> : Metadata will change MKV video files including all audio, streams, and subtitle titles."""
-
-META_TXT = """
-**ᴍᴀɴᴀɢɪɴɢ ᴍᴇᴛᴀᴅᴀᴛᴀ ғᴏʀ ʏᴏᴜʀ ᴠɪᴅᴇᴏs ᴀɴᴅ ғɪʟᴇs**
-
-**ᴠᴀʀɪᴏᴜꜱ ᴍᴇᴛᴀᴅᴀᴛᴀ:**
-
-- **ᴛɪᴛʟᴇ**: Descriptive title of the media.
-- **ᴀᴜᴛʜᴏʀ**: The creator or owner of the media.
-- **ᴀʀᴛɪꜱᴛ**: The artist associated with the media.
-- **ᴀᴜᴅɪᴏ**: Title or description of audio content.
-- **ꜱᴜʙᴛɪᴛʟᴇ**: Title of subtitle content.
-- **ᴠɪᴅᴇᴏ**: Title or description of video content.
-
-**ᴄᴏᴍᴍᴀɴᴅꜱ ᴛᴏ ᴛᴜʀɴ ᴏɴ ᴏғғ ᴍᴇᴛᴀᴅᴀᴛᴀ:**
-➜ /metadata: Turn on or off metadata.
-
-**ᴄᴏᴍᴍᴀɴᴅꜱ ᴛᴏ ꜱᴇᴛ ᴍᴇᴛᴀᴅᴀᴛᴀ:**
-
-➜ /settitle: Set a custom title of media.
-➜ /setauthor: Set the author.
-➜ /setartist: Set the artist.
-➜ /setaudio: Set audio title.
-➜ /setsubtitle: Set subtitle title.
-➜ /setvideo: Set video title.
-➜ /setencoded_by: Set encoded by title.
-➜ /setcustom_tag: Set custom tag title.
+💠 /settitle — 𝐒𝐞𝐭 𝐚 𝐜𝐮𝐬𝐭𝐨𝐦 𝐭𝐢𝐭𝐥𝐞 𝐟𝐨𝐫 𝐲𝐨𝐮𝐫 𝐦𝐞𝐝𝐢𝐚
+🖋 /setauthor — 𝐀𝐝𝐝 𝐭𝐡𝐞 𝐚𝐮𝐭𝐡𝐨𝐫 𝐧𝐚𝐦𝐞
+🎤 /setartist — 𝐒𝐩𝐞𝐜𝐢𝐟𝐲 𝐭𝐡𝐞 𝐚𝐫𝐭𝐢𝐬𝐭 𝐧𝐚𝐦𝐞
+🎵 /setaudio — 𝐒𝐞𝐭 𝐭𝐡𝐞 𝐚𝐮𝐝𝐢𝐨 𝐭𝐢𝐭𝐥𝐞
+💬 /setsubtitle — 𝐂𝐡𝐚𝐧𝐠𝐞 𝐭𝐡𝐞 𝐬𝐮𝐛𝐭𝐢𝐭𝐥𝐞 𝐭𝐢𝐭𝐥𝐞
+🎬 /setvideo — 𝐒𝐞𝐭 𝐭𝐡𝐞 𝐯𝐢𝐝𝐞𝐨 𝐭𝐢𝐭𝐥𝐞
+⚙️ /setencoded_by — 𝐒𝐞𝐭 𝐭𝐡𝐞 “𝐞𝐧𝐜𝐨𝐝𝐞𝐝 𝐛𝐲” 𝐟𝐢𝐞𝐥𝐝
+🏷 /setcustom_tag — 𝐀𝐝𝐝 𝐚 𝐜𝐮𝐬𝐭𝐨𝐦 𝐭𝐚𝐠 𝐭𝐢𝐭𝐥𝐞
 
 **ᴇxᴀᴍᴘʟᴇ:** /settitle Your Title Here
 
